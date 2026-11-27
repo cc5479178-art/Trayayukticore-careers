@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers at Traya Yukti Core — Internship Recruitment Programme</title>
+<meta name="description" content="Join Traya Yukti Core (TYC). Internship openings for Full-Stack Developer, Frontend Developer, UI/UX Designer and CRM & Client Recruitment Management. Build. Create. Innovate.">
+<meta property="og:title" content="Careers at Traya Yukti Core (TYC)">
+<meta property="og:description" content="Internship applications are open. Don't just learn. Build something meaningful.">
+<link rel="icon" href="https://res.cloudinary.com/uc65veyn/image/upload/f_auto,q_auto/160778">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05060a;
+  --bg-elev:#0b0d14;
+  --surface:rgba(255,255,255,.045);
+  --surface-strong:rgba(255,255,255,.08);
+  --border:rgba(255,255,255,.09);
+  --border-strong:rgba(255,255,255,.16);
+  --text:#f5f6f8;
+  --text-dim:#a2a8b8;
+  --text-faint:#6b7183;
+  --accent:#6d8bff;
+  --accent2:#b06bff;
+  --accent3:#3fd6c5;
+  --grad:linear-gradient(100deg,#6d8bff 0%,#b06bff 48%,#ff7ac2 100%);
+  --radius:22px;
+  --max:1120px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;line-height:1.6;
+}
+::selection{background:rgba(109,139,255,.35)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+.aurora{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;filter:blur(110px);opacity:.32;will-change:transform}
+.aurora .a1{width:640px;height:640px;background:#3d5cff;top:-220px;left:-140px;animation:drift1 26s var(--ease) infinite alternate}
+.aurora .a2{width:520px;height:520px;background:#8a3dff;top:-140px;right:-120px;animation:drift2 32s var(--ease) infinite alternate}
+.aurora .a3{width:460px;height:460px;background:#0e7f8f;bottom:-200px;left:34%;opacity:.22;animation:drift3 38s var(--ease) infinite alternate}
+@keyframes drift1{to{transform:translate(120px,90px) scale(1.12)}}
+@keyframes drift2{to{transform:translate(-90px,110px) scale(1.08)}}
+@keyframes drift3{to{transform:translate(-70px,-90px) scale(1.15)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:3px 3px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s}
+header.scrolled{background:rgba(6,7,12,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--border)}
+.nav{max-width:var(--max);margin:0 auto;padding:0 28px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;letter-spacing:-.02em;font-size:15.5px}
+.brand .mark{width:32px;height:32px;border-radius:9px;overflow:hidden;background:linear-gradient(135deg,#1a2350,#3a2a6e);display:flex;align-items:center;justify-content:center;flex:none;border:1px solid var(--border-strong)}
+.brand .mark img{width:100%;height:100%;object-fit:cover}
+.brand .mark .mono{font-size:12px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:none}
+.brand small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;color:var(--text-faint);text-transform:uppercase;line-height:1;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{font-size:13.5px;font-weight:500;color:var(--text-dim);padding:8px 14px;border-radius:999px;transition:color .25s,background .25s}
+.nav-links a:hover{color:var(--text);background:var(--surface-strong)}
+.nav-cta{font-size:13.5px;font-weight:600;color:#0b0d14!important;background:#fff!important;padding:9px 18px;border-radius:999px;transition:transform .25s var(--ease),box-shadow .25s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(255,255,255,.18)}
+.menu-btn{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:8px}
+
+.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:130px 0 90px}
+.hero-inner{max-width:880px;margin:0 auto;padding:0 28px}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#cdd6ff;background:rgba(109,139,255,.1);border:1px solid rgba(109,139,255,.3);padding:8px 18px;border-radius:999px;margin-bottom:34px}
+.pulse{width:7px;height:7px;border-radius:50%;background:#5df0c8;box-shadow:0 0 0 0 rgba(93,240,200,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(93,240,200,0)}100%{box-shadow:0 0 0 0 rgba(93,240,200,0)}}
+.hero h1{font-size:clamp(46px,7.4vw,92px);line-height:1.02;letter-spacing:-.045em;font-weight:800;margin-bottom:10px}
+.hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.hero p.sub{font-size:clamp(17px,2vw,21px);color:var(--text-dim);max-width:600px;margin:26px auto 42px;font-weight:400}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15.5px;padding:15px 30px;border-radius:999px;cursor:pointer;border:0;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 40px rgba(122,102,255,.35)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 52px rgba(122,102,255,.5)}
+.btn-ghost{background:var(--surface);border:1px solid var(--border-strong);color:var(--text)}
+.btn-ghost:hover{background:var(--surface-strong);transform:translateY(-2px)}
+.hero-meta{margin-top:56px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:var(--text-faint);font-size:13px;font-weight:500}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px}
+.dot{width:4px;height:4px;border-radius:50%;background:var(--text-faint)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--text-faint);animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+
+section{padding:110px 0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+h2{font-size:clamp(32px,4.4vw,52px);letter-spacing:-.035em;line-height:1.08;font-weight:800;margin-bottom:18px}
+.lead{color:var(--text-dim);font-size:clamp(16px,1.6vw,18.5px);max-width:640px}
+.sec-head{margin-bottom:60px}
+
+.roles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.role{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:34px 32px 30px;overflow:hidden;transition:transform .45s var(--ease),border-color .45s,background .45s;display:flex;flex-direction:column}
+.role::before{content:"";position:absolute;inset:0;background:radial-gradient(480px 220px at var(--mx,50%) -20%,rgba(109,139,255,.16),transparent 65%);opacity:0;transition:opacity .5s}
+.role:hover{transform:translateY(-5px);border-color:var(--border-strong);background:rgba(255,255,255,.065)}
+.role:hover::before{opacity:1}
+.role .icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;border:1px solid var(--border-strong);background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.02))}
+.role .icon svg{width:23px;height:23px;stroke:url(#icg)}
+.role h3{font-size:21px;letter-spacing:-.02em;font-weight:700;margin-bottom:10px}
+.role p{color:var(--text-dim);font-size:14.5px;margin-bottom:20px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tag{font-size:11.5px;font-weight:600;color:#c4cdf2;background:rgba(109,139,255,.1);border:1px solid rgba(109,139,255,.22);padding:5px 12px;border-radius:999px;letter-spacing:.02em}
+.role .apply{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff}
+.role .apply svg{width:15px;height:15px;transition:transform .3s var(--ease)}
+.role:hover .apply svg{transform:translateX(4px)}
+.role .num{position:absolute;top:26px;right:30px;font-size:12px;font-weight:700;color:var(--text-faint);letter-spacing:.1em}
+
+.gain-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.gain{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px;transition:transform .45s var(--ease),border-color .45s,background .45s;position:relative;overflow:hidden}
+.gain:hover{transform:translateY(-4px);border-color:var(--border-strong);background:rgba(255,255,255,.065)}
+.gain .icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:var(--surface-strong);border:1px solid var(--border-strong)}
+.gain .icon svg{width:20px;height:20px;stroke:url(#icg)}
+.gain h3{font-size:17px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.gain p{color:var(--text-dim);font-size:14px}
+.g-span6{grid-column:span 6}
+.g-span4{grid-column:span 4}
+.g-span3{grid-column:span 3}
+.gain.feature{background:linear-gradient(150deg,rgba(109,139,255,.14),rgba(176,107,255,.08) 55%,rgba(63,214,197,.07));border-color:rgba(109,139,255,.3)}
+.gain.feature h3{font-size:20px}
+
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.who-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:38px 36px}
+.who-card h3{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px}
+.check{list-style:none;display:flex;flex-direction:column;gap:15px}
+.check li{display:flex;gap:13px;align-items:flex-start;color:var(--text-dim);font-size:15px}
+.check .tick{flex:none;width:21px;height:21px;border-radius:50%;background:rgba(93,240,200,.12);border:1px solid rgba(93,240,200,.35);display:flex;align-items:center;justify-content:center;margin-top:2px}
+.check .tick svg{width:11px;height:11px;stroke:#5df0c8;stroke-width:2.6}
+.expect{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.exp-pill{font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;background:var(--surface-strong);border:1px solid var(--border-strong);transition:transform .3s var(--ease),border-color .3s,background .3s}
+.exp-pill:hover{transform:translateY(-2px);border-color:rgba(109,139,255,.5);background:rgba(109,139,255,.1)}
+
+.quote{padding:150px 0;text-align:center;position:relative}
+.quote blockquote{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(34px,5.2vw,62px);line-height:1.14;letter-spacing:-.015em;max-width:900px;margin:0 auto}
+.quote blockquote .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
+.quote .who{margin-top:30px;color:var(--text-faint);font-size:13px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-family:'Inter',sans-serif;font-style:normal}
+
+.apply-sec{padding-bottom:130px}
+.apply-panel{background:linear-gradient(160deg,rgba(20,24,44,.9),rgba(10,11,20,.9));border:1px solid var(--border-strong);border-radius:34px;padding:clamp(36px,5vw,68px);position:relative;overflow:hidden}
+.apply-panel::before{content:"";position:absolute;top:-140px;right:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(109,139,255,.24),transparent 70%);filter:blur(40px)}
+.apply-panel h2{margin-bottom:12px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px;position:relative;z-index:1}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-faint)}
+.field input,.field select,.field textarea{
+  background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:13px;color:var(--text);
+  padding:14px 16px;font-size:15px;font-family:inherit;outline:none;transition:border-color .25s,box-shadow .25s,background .25s;width:100%;
+}
+.field textarea{resize:vertical;min-height:104px}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23a2a8b8' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.field select option{background:#12141f;color:var(--text)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(109,139,255,.65);box-shadow:0 0 0 4px rgba(109,139,255,.14);background:rgba(255,255,255,.07)}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-faint)}
+.form-foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:8px}
+.form-foot p{color:var(--text-faint);font-size:13px;max-width:420px}
+.form-note{color:#5df0c8;font-size:14px;font-weight:600;display:none;align-items:center;gap:8px}
+.form-note.show{display:inline-flex}
+.btn-dark{background:#fff;color:#0b0d14}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(255,255,255,.2)}
+
+footer{border-top:1px solid var(--border);padding:64px 0 46px}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:46px}
+.foot-brand .brand{margin-bottom:14px}
+.foot-brand p{color:var(--text-dim);font-size:14px;max-width:340px}
+.foot-links{display:flex;gap:64px;flex-wrap:wrap}
+.foot-links h4{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-faint);margin-bottom:16px}
+.foot-links a{display:block;color:var(--text-dim);font-size:14px;padding:5px 0;transition:color .25s}
+.foot-links a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--border);color:var(--text-faint);font-size:13px}
+.wordmark{font-weight:800;letter-spacing:.28em;font-size:clamp(28px,6vw,58px);text-align:center;background:linear-gradient(180deg,rgba(245,246,248,.16),rgba(245,246,248,.02));-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none;margin-top:30px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+@media(max-width:920px){
+  .roles-grid{grid-template-columns:1fr}
+  .g-span6,.g-span4,.g-span3{grid-column:span 12}
+  .who-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .nav-links{position:fixed;inset:64px 0 auto 0;background:rgba(6,7,12,.96);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;padding:18px 28px 26px;gap:4px;border-bottom:1px solid var(--border);transform:translateY(-130%);transition:transform .45s var(--ease)}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:13px 14px;font-size:16px}
+  .nav-links .nav-cta{margin-top:10px;text-align:center;justify-content:center;display:flex}
+  .menu-btn{display:block}
+  section{padding:80px 0}
+  .form-grid{grid-template-columns:1fr}
+  .field{grid-column:1/-1}
+  .quote{padding:100px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="icg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fa5ff"/><stop offset=".55" stop-color="#c48cff"/><stop offset="1" stop-color="#5fe6d0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="aurora" aria-hidden="true"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="header">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <span class="mark">
+        <img src="https://res.cloudinary.com/uc65veyn/image/upload/f_auto,q_auto/160778" alt="TYC logo"
+             onerror="this.style.display='none';this.parentElement.querySelector('.mono').style.display='block'">
+        <span class="mono">TYC</span>
+      </span>
+      <span>Traya Yukti Core<small>Careers</small></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#roles">Open Roles</a>
+      <a href="#gain">What You Gain</a>
+      <a href="#who">Who Can Apply</a>
+      <a href="#expect">Our Values</a>
+      <a class="nav-cta" href="#apply">Apply Now</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="pill reveal"><span class="pulse"></span>Internship Applications Open</span>
+      <h1 class="reveal d1">Don't just learn.<br><span class="serif grad">Build something</span><br>meaningful.</h1>
+      <p class="sub reveal d2">Traya Yukti Core is hiring interns across engineering, design and business operations. Work on real projects, learn from mentors, and take your first step towards professional growth.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-primary" href="#apply">Apply for an Internship
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#roles">Explore Open Roles</a>
+      </div>
+      <div class="hero-meta reveal d4">
+        <span>4 open positions</span><span class="dot"></span>
+        <span>Official completion certificate</span><span class="dot"></span>
+        <span>Performance-based stipend</span>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
+    </div>
+  </section>
+
+  <section id="roles">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Open Positions</p>
+        <h2 class="reveal d1">We are hiring <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400">interns.</span></h2>
+        <p class="lead reveal d2">TYC invites enthusiastic, creative and motivated candidates to join one of our four internship tracks.</p>
+      </div>
+      <div class="roles-grid">
+        <article class="role reveal">
+          <span class="num">01</span>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></div>
+          <h3>Full-Stack Developer</h3>
+          <p>Own features end to end — from data models and APIs to polished, responsive interfaces — on real products shipped to users.</p>
+          <div class="tags"><span class="tag">Frontend</span><span class="tag">Backend</span><span class="tag">APIs</span><span class="tag">Databases</span></div>
+          <a class="apply" href="#apply">Apply for this role <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="role reveal d1">
+          <span class="num">02</span>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+          <h3>Frontend Developer</h3>
+          <p>Craft fast, accessible and beautiful user interfaces. Turn designs into pixel-perfect, interactive experiences on the web.</p>
+          <div class="tags"><span class="tag">HTML / CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span><span class="tag">UI Motion</span></div>
+          <a class="apply" href="#apply">Apply for this role <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="role reveal d2">
+          <span class="num">03</span>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1.1 5.6L12 15.8 7 18.4l1.1-5.6L4 8.9l5.6-.7z"/></svg></div>
+          <h3>UI/UX Designer</h3>
+          <p>Shape how products look, feel and flow. Research, wireframe, prototype and design interfaces people genuinely love using.</p>
+          <div class="tags"><span class="tag">Figma</span><span class="tag">Prototyping</span><span class="tag">User Research</span><span class="tag">Design Systems</span></div>
+          <a class="apply" href="#apply">Apply for this role <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+        <article class="role reveal d3">
+          <span class="num">04</span>
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>CRM &amp; Client Recruitment Management</h3>
+          <p>Sit at the heart of the business — manage client relationships, coordinate outreach and drive the recruitment pipeline end to end.</p>
+          <div class="tags"><span class="tag">CRM Tools</span><span class="tag">Client Success</span><span class="tag">Outreach</span><span class="tag">Operations</span></div>
+          <a class="apply" href="#apply">Apply for this role <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gain">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">The Internship Experience</p>
+        <h2 class="reveal d1">What you will gain.</h2>
+        <p class="lead reveal d2">More than a certificate — an experience that compounds into your career.</p>
+      </div>
+      <div class="gain-grid">
+        <div class="gain feature g-span6 reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg></div>
+          <h3>Official Internship Completion Certificate</h3>
+          <p>A verified credential from Traya Yukti Core that validates your hands-on contribution and strengthens every application you make next.</p>
+        </div>
+        <div class="gain g-span3 reveal d1">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a5 5 0 1 0-5.4 8.2L8 20l4-1.6L16 20l-1.3-5.5a5 5 0 0 0 0-8.2z"/></svg></div>
+          <h3>Hands-on Projects</h3>
+          <p>Real-world work, not sample tasks. Your code and designs ship.</p>
+        </div>
+        <div class="gain g-span3 reveal d2">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Professional Mentorship</h3>
+          <p>Guidance from experienced professionals invested in your growth.</p>
+        </div>
+        <div class="gain g-span4 reveal">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.8 2.8M16.2 16.2 19 19M19 5l-2.8 2.8M7.8 16.2 5 19"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+          <h3>Skill Development</h3>
+          <p>Grow technically and professionally — communication, ownership and craft — through structured, real deliverables.</p>
+        </div>
+        <div class="gain g-span4 reveal d1">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/></svg></div>
+          <h3>Portfolio Building</h3>
+          <p>Leave with shipped work and case studies you can show, not just talk about.</p>
+        </div>
+        <div class="gain g-span4 reveal d2">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 2.5 3.6 5.6 3.6 9S14.5 18.5 12 21c-2.5-2.5-3.6-5.6-3.6-9S9.5 5.5 12 3z"/></svg></div>
+          <h3>Real Business Exposure</h3>
+          <p>Collaborative team experience and a window into how real business workflows operate.</p>
+        </div>
+        <div class="gain feature g-span12 reveal d1" style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+          <div style="max-width:560px">
+            <h3>Performance-based stipend &amp; rewards</h3>
+            <p>Exceptional work is recognised — stipends and rewards as per company policy.</p>
+          </div>
+          <a class="btn btn-primary" href="#apply" style="flex:none">Start Your Application
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow reveal">Eligibility</p>
+        <h2 class="reveal d1">Who can apply.</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-card reveal">
+          <h3>You'll fit right in if you are…</h3>
+          <ul class="check">
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>A student or aspiring professional looking for real experience</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>A fresher eager to develop practical, job-ready skills</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>Passionate about technology, design or business operations</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>Willing to learn, collaborate and contribute from day one</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg></span>Proactive and committed to your assigned responsibilities</li>
+          </ul>
+        </div>
+        <div class="who-card reveal d1" id="expect">
+          <h3>What we value</h3>
+          <p class="lead" style="font-size:15px">No rigid checklists. We look at how you think and how you work.</p>
+          <div class="expect">
+            <span class="exp-pill">Creativity</span>
+            <span class="exp-pill">Accountability</span>
+            <span class="exp-pill">Communication</span>
+            <span class="exp-pill">Teamwork</span>
+            <span class="exp-pill">Problem-solving</span>
+            <span class="exp-pill">Willingness to learn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <blockquote class="reveal">"Don't just learn. <span class="grad">Build something meaningful.</span>"</blockquote>
+      <p class="who reveal d1">Our Message — Traya Yukti Core</p>
+    </div>
+  </section>
+
+  <section class="apply-sec" id="apply">
+    <div class="wrap">
+      <div class="apply-panel reveal">
+        <p class="eyebrow">Applications Open</p>
+        <h2>Take your first step towards professional growth.</h2>
+        <p class="lead">Apply through the official TYC internship application portal. Tell us who you are and what you want to build.</p>
+        <form class="form-grid" id="applyForm" novalidate>
+          <div class="field">
+            <label for="fname">Full Name</label>
+            <input id="fname" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="femail">Email Address</label>
+            <input id="femail" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="frole">Preferred Role</label>
+            <select id="frole" name="role" required>
+              <option value="" selected disabled>Select a position</option>
+              <option>Full-Stack Developer</option>
+              <option>Frontend Developer</option>
+              <option>UI/UX Designer</option>
+              <option>CRM &amp; Client Recruitment Management</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="flink">Portfolio / LinkedIn / GitHub</label>
+            <input id="flink" name="link" type="url" placeholder="https://">
+          </div>
+          <div class="field full">
+            <label for="fwhy">Why do you want to join TYC?</label>
+            <textarea id="fwhy" name="why" placeholder="Tell us what you'd love to build with us…"></textarea>
+          </div>
+          <div class="form-foot">
+            <p>Shortlisted candidates are contacted for the next round. All applications are reviewed by the TYC recruitment team.</p>
+            <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+              <span class="form-note" id="formNote">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5"/></svg>
+                Application received — we'll be in touch.
+              </span>
+              <button class="btn btn-dark" type="submit">Submit Application
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="mark">
+            <img src="https://res.cloudinary.com/uc65veyn/image/upload/f_auto,q_auto/160778" alt="TYC logo"
+                 onerror="this.style.display='none';this.parentElement.querySelector('.mono').style.display='block'">
+            <span class="mono">TYC</span>
+          </span>
+          <span>Traya Yukti Core<small>Careers</small></span>
+        </a>
+        <p>Focused on technology, digital solutions, innovation and skill development — helping aspiring professionals grow through real-world work.</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>Programme</h4>
+          <a href="#roles">Open Roles</a>
+          <a href="#gain">What You Gain</a>
+          <a href="#who">Who Can Apply</a>
+          <a href="#apply">Apply</a>
+        </div>
+        <div>
+          <h4>Positions</h4>
+          <a href="#apply">Full-Stack Developer</a>
+          <a href="#apply">Frontend Developer</a>
+          <a href="#apply">UI/UX Designer</a>
+          <a href="#apply">CRM &amp; Recruitment</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Traya Yukti Core (TYC). All rights reserved.</span>
+      <span>Internship Recruitment Programme</span>
+    </div>
+    <div class="wordmark">BUILD · CREATE · INNOVATE</div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>10);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{
+  const open=navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open);
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');
+}));
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.role').forEach(card=>{
+  card.addEventListener('pointermove',e=>{
+    const r=card.getBoundingClientRect();
+    card.style.setProperty('--mx',((e.clientX-r.left)/r.width*100)+'%');
+  });
+});
+
+const form=document.getElementById('applyForm');
+const note=document.getElementById('formNote');
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  if(!form.checkValidity()){form.reportValidity();return;}
+  note.classList.add('show');
+  form.querySelectorAll('input,select,textarea,button').forEach(el=>el.disabled=true);
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
