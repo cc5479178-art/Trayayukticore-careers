@@ -88,6 +88,13 @@ header.scrolled{background:rgba(6,7,12,.72);backdrop-filter:saturate(180%) blur(
 .hero-meta{margin-top:56px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap;color:var(--text-faint);font-size:13px;font-weight:500}
 .hero-meta span{display:inline-flex;align-items:center;gap:8px}
 .dot{width:4px;height:4px;border-radius:50%;background:var(--text-faint)}
+
+.ticker{border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;padding:22px 0;background:rgba(255,255,255,.015)}
+.ticker-track{display:flex;gap:0;width:max-content;animation:scroll 36s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{font-size:14px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;padding-right:56px}
+.ticker-track span em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes scroll{to{transform:translateX(-50%)}}
 .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--text-faint);animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{50%{transform:translate(-50%,8px)}}
 
@@ -137,6 +144,24 @@ h2{font-size:clamp(32px,4.4vw,52px);letter-spacing:-.035em;line-height:1.08;font
 .exp-pill{font-size:14px;font-weight:600;padding:11px 20px;border-radius:999px;background:var(--surface-strong);border:1px solid var(--border-strong);transition:transform .3s var(--ease),border-color .3s,background .3s}
 .exp-pill:hover{transform:translateY(-2px);border-color:rgba(255,138,74,.55);background:rgba(255,138,74,.1)}
 
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.process-grid::before{content:"";position:absolute;top:33px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,138,74,.4),rgba(255,77,94,.4),transparent)}
+.step{position:relative;text-align:center;padding:0 10px}
+.step .n{width:66px;height:66px;margin:0 auto 20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:#ffd9b8;background:var(--bg-elev);border:1px solid rgba(255,138,74,.4);position:relative;z-index:1;transition:transform .4s var(--ease),border-color .4s,box-shadow .4s}
+.step:hover .n{transform:translateY(-4px);border-color:rgba(255,138,74,.8);box-shadow:0 10px 34px rgba(255,106,61,.25)}
+.step h3{font-size:17px;font-weight:700;letter-spacing:-.015em;margin-bottom:8px}
+.step p{color:var(--text-dim);font-size:14px}
+
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+details.faq{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:border-color .35s,background .35s}
+details.faq[open]{border-color:var(--border-strong);background:rgba(255,255,255,.06)}
+details.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;font-size:16px;font-weight:600;letter-spacing:-.01em}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .plus{flex:none;width:26px;height:26px;border-radius:50%;background:var(--surface-strong);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;transition:transform .35s var(--ease),background .35s}
+details.faq summary .plus svg{width:12px;height:12px;stroke:var(--text-dim);stroke-width:2.2;stroke-linecap:round}
+details.faq[open] summary .plus{transform:rotate(45deg);background:rgba(255,138,74,.16);border-color:rgba(255,138,74,.5)}
+details.faq .a{padding:0 26px 24px;color:var(--text-dim);font-size:14.5px;max-width:640px}
+
 .quote{padding:150px 0;text-align:center;position:relative}
 .quote blockquote{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(34px,5.2vw,62px);line-height:1.14;letter-spacing:-.015em;max-width:900px;margin:0 auto}
 .quote blockquote .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
@@ -185,6 +210,9 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
   .roles-grid{grid-template-columns:1fr}
   .g-span6,.g-span4,.g-span3{grid-column:span 12}
   .who-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .process-grid::before{display:none}
+  .faq-list{max-width:100%}
 }
 @media(max-width:760px){
   .nav-links{position:fixed;inset:64px 0 auto 0;background:rgba(6,7,12,.96);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;padding:18px 28px 26px;gap:4px;border-bottom:1px solid var(--border);transform:translateY(-130%);transition:transform .45s var(--ease)}
@@ -195,6 +223,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
   section{padding:80px 0}
   .form-grid{grid-template-columns:1fr}
   .field{grid-column:1/-1}
+  .process-grid{grid-template-columns:1fr}
   .quote{padding:100px 0}
 }
 @media(prefers-reduced-motion:reduce){
@@ -230,8 +259,9 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
     <div class="nav-links" id="navLinks">
       <a href="#roles">Open Roles</a>
       <a href="#gain">What You Gain</a>
+      <a href="#process">Process</a>
       <a href="#who">Who Can Apply</a>
-      <a href="#expect">Our Values</a>
+      <a href="#faq">FAQ</a>
       <a class="nav-cta" href="#apply">Apply Now</a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
@@ -263,6 +293,13 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 4v16m0 0l-6-6m6 6l6-6"/></svg>
     </div>
   </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Build <em>·</em> Create <em>·</em> Innovate <em>·</em> Traya Yukti Core <em>·</em> Build <em>·</em> Create <em>·</em> Innovate <em>·</em> Traya Yukti Core <em>·</em>&nbsp;</span>
+      <span>Build <em>·</em> Create <em>·</em> Innovate <em>·</em> Traya Yukti Core <em>·</em> Build <em>·</em> Create <em>·</em> Innovate <em>·</em> Traya Yukti Core <em>·</em>&nbsp;</span>
+    </div>
+  </div>
 
   <section id="roles">
     <div class="wrap">
@@ -392,10 +429,57 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
     </div>
   </section>
 
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center">
+        <p class="eyebrow reveal">How It Works</p>
+        <h2 class="reveal d1">From application to onboarding.</h2>
+        <p class="lead reveal d2" style="margin:0 auto">A simple, transparent path — designed to respect your time.</p>
+      </div>
+      <div class="process-grid">
+        <div class="step reveal"><div class="n">1</div><h3>Apply</h3><p>Submit your application through the TYC portal with your preferred role and portfolio.</p></div>
+        <div class="step reveal d1"><div class="n">2</div><h3>Review</h3><p>Our recruitment team reviews every application for passion, potential and fit.</p></div>
+        <div class="step reveal d2"><div class="n">3</div><h3>Interaction</h3><p>Shortlisted candidates meet the team for a friendly, practical conversation.</p></div>
+        <div class="step reveal d3"><div class="n">4</div><h3>Onboard</h3><p>Get your offer, meet your mentor and start contributing to real projects.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="quote">
     <div class="wrap">
       <blockquote class="reveal">"Don't just learn. <span class="grad">Build something meaningful.</span>"</blockquote>
       <p class="who reveal d1">Our Message — Traya Yukti Core</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center">
+        <p class="eyebrow reveal">FAQ</p>
+        <h2 class="reveal d1">Questions, answered.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq reveal">
+          <summary>Who is eligible for the TYC internship programme?<span class="plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="a">Students, freshers and aspiring professionals passionate about technology, design or business operations. If you are willing to learn, collaborate and contribute, you are welcome to apply.</p>
+        </details>
+        <details class="faq reveal d1">
+          <summary>Do I receive a certificate after completion?<span class="plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="a">Yes. Every intern who completes the programme receives an Official Internship Completion Certificate from Traya Yukti Core.</p>
+        </details>
+        <details class="faq reveal d2">
+          <summary>Is the internship paid?<span class="plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="a">Performance is recognised — stipends and rewards are offered as per company policy, based on your contribution during the programme.</p>
+        </details>
+        <details class="faq reveal d3">
+          <summary>What will I actually work on?<span class="plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="a">Real-world projects with professional mentorship — hands-on experience, portfolio-building opportunities and exposure to genuine business workflows.</p>
+        </details>
+        <details class="faq reveal d4">
+          <summary>How do I apply?<span class="plus"><svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+          <p class="a">Apply through the official TYC internship application portal using the form below. Shortlisted candidates are contacted for the next round.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -470,7 +554,8 @@ footer{border-top:1px solid var(--border);padding:64px 0 46px}
           <h4>Programme</h4>
           <a href="#roles">Open Roles</a>
           <a href="#gain">What You Gain</a>
-          <a href="#who">Who Can Apply</a>
+          <a href="#process">How It Works</a>
+          <a href="#faq">FAQ</a>
           <a href="#apply">Apply</a>
         </div>
         <div>
